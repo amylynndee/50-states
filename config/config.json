@@ -1,7 +1,7 @@
 {
   "development": {
     "storage": "states.db",
-    "dialect": "mysql"
+    "dialect": "sqlite"
   },
   "test": {
     "username": "root",

@@ -36,3 +36,4 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+// only making changes to this file to get rid of commit message

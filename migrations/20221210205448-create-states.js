@@ -42,4 +42,4 @@ module.exports = {
   }
 };
 
-// migrations are instructions for how to create a database table. - Lines 10-33 are used aas properties in our code
+// migrations are instructions for how to create a database table. - Lines 10-33 are used as properties in our code

@@ -26,4 +26,4 @@ module.exports = (sequelize, DataTypes) => {
   return States;
 };
 
-// this file in models is what will be used by our JS code to interacte with the 'States' table, find states objects in our code. Will retrieve 'States' data from the DB
+// this file in models is what will be used by our JS code to interact with the 'States' table, find states objects in our code. Will retrieve 'States' data from the DB
