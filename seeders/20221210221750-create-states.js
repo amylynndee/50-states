@@ -310,7 +310,7 @@ let states = [
 ]
 
 
-/** @type {import('sequelize-cli').Migration} */
+// /** @type {import('sequelize-cli').Migration} */ - commented this out to see if this is causing the issue
 module.exports = {
   async up (queryInterface, Sequelize) {
     /**

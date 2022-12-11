@@ -3,6 +3,7 @@
     <page-header></page-header>         <!-- Vue prefers kebab case with dashes between the name, however I also could do <PageHeader><PageHeader-->
 
     <p>TODO - app content</p>
+    <state-list></state-list>
 
     <page-footer></page-footer>
   </div>
@@ -12,17 +13,15 @@
 
 import PageHeader from '@/components/PageHeader.vue'
 import PageFooter from './components/PageFooter.vue'  
+import StateList from './components/StateList.vue'
 
 
 export default {
   name: 'App',
   components: {
     PageHeader,
-    PageFooter
-
-  },
-  mounted() {
-    this.$stateService.getAllStates().then( states => console.log(states))
+    PageFooter,
+    StateList
   }
 }
 </script>
