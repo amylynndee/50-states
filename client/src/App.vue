@@ -2,8 +2,9 @@
   <div>
     <page-header></page-header>         <!-- Vue prefers kebab case with dashes between the name, however I also could do <PageHeader><PageHeader-->
 
-    <p>TODO - app content</p>
-    <state-list></state-list>
+      <router-view></router-view>
+
+    <!-- <state-list></state-list> -->
 
     <page-footer></page-footer>
   </div>
@@ -12,7 +13,7 @@
 <script>
 
 import PageHeader from '@/components/PageHeader.vue'
-import PageFooter from './components/PageFooter.vue'  
+import PageFooter from '@/components/PageFooter.vue'  // just fixed this
 import StateList from './components/StateList.vue'
 
 

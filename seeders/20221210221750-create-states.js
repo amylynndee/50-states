@@ -312,7 +312,8 @@ let states = [
 
 // /** @type {import('sequelize-cli').Migration} */ - commented this out to see if this is causing the issue
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  // async up (queryInterface, Sequelize) {
+    up: async (queryInterface, Sequelize) => {          // reformatting this line of code, previous version is the line above
     /**
      * Add seed commands here.
      *
@@ -327,7 +328,8 @@ module.exports = {
 
   },
 
-  async down (queryInterface, Sequelize) {
+  // async down (queryInterface, Sequelize) {
+    down: async (queryInterface, Sequelize) => {          // reformatting this line of code, previous version is the line above
     /**
      * Add commands to revert seed here.
      *

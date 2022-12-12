@@ -1,7 +1,8 @@
 'use strict';
-// /** @type {import('sequelize-cli').Migration} */ - commented this out to see if this is causing the issue
+// /** @type {import('sequelize-cli').Migration} */ - commented this out to see if this is causing issues
 module.exports = {
-  async up(queryInterface, Sequelize) {
+  // async up(queryInterface, Sequelize) {
+    up: async (queryInterface, Sequelize) => {        // reformatting this line of code, previous version is the line above
     await queryInterface.createTable('States', {
       id: {
         allowNull: false,
@@ -37,7 +38,8 @@ module.exports = {
       }
     });
   },
-  async down(queryInterface, Sequelize) {
+  // async down(queryInterface, Sequelize) {
+    down: async (queryInterface, Sequelize) => {         // reformatting this line of code, previous version is the line above
     await queryInterface.dropTable('States');
   }
 };
