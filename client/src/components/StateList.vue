@@ -1,10 +1,9 @@
 <template>
-    <div>
-        <p v-for="state in states" v-bind:key="state.name">
-            {{ state.name }}
-        </p>
+    <div class="state-list-container">
+        <div class="state-container" v-for="state in states" v-bind:key="state.name">
+            <state-detail v-bind:state="state"></state-detail>
+        </div>
     </div>
-
 </template>
 
 <script>
@@ -29,4 +28,16 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+
+.state-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:  space-evenly;
+}
+
+.state-container {
+    margin: 1rem;
+}
+
+</style>
