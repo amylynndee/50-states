@@ -22,7 +22,7 @@ router.patch('/states/:name', function(req, res, next){
     .then( rowsUpdated => {
         let numberOfRowsUpdated = rowsUpdated[0]
         if (numberOfRowsUpdated == 1) {
-            return res.send('ok')
+            return res.send('ok')   /// status code 200
         }
         return res.status(404).send('State not found')
     })

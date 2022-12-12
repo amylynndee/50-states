@@ -4,7 +4,7 @@
     <span class="state-name">{{ state.name }}</span>
 
     <div>
-        <input class="visit-state" type="checkbox">
+        <input class="visit-state" type="checkbox" v-model="visited" v-on:change="visitedChanged">
     </div>
 
 </div>
@@ -15,8 +15,19 @@
 
 export default {
     name: 'StateDetail',
+    emits: ['update-visited'],
     props: {
-        state: Object
+        state: Object       // dont modify props
+    },
+    data() {
+        return {
+            visited: this.state.visited     // ok to modify data
+        }
+    },
+    methods: {
+        visitedChanged() {
+            this.$emit('update-visited', this.state.name, this.visited)
+        }
     }
 }
 
