@@ -5,6 +5,8 @@ import StateAPIService from '@/services/stateService'
 
 import router from '@/router'                        // added in video 6
 
+import 'leaflet/dist/leaflet.css'                      // added in video 11
+
 let app = createApp(App)                               // let app = createApp(App).mount('#app') - this may have been my error error where array of state info was not displaying dev tools
 
 app.config.globalProperties.$stateService = StateAPIService
