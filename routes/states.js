@@ -18,7 +18,7 @@ router.get('/state/:name', function(req, res, name) {
         .then( state => {
             if (state) {
                 return res.json(state)
-            } else {
+            } else {        // for example, if name is "NotAState"
                 return res.status(404).send('State not found')
             }
         })
