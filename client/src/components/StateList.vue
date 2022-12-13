@@ -1,4 +1,8 @@
 <template>
+    <div>
+        <state-summary v-bind:states="states"></state-summary>
+    </div>
+
     <div class="state-list-container">
         <div class="state-container" v-for="state in states" v-bind:key="state.name">
             <state-detail 
@@ -11,12 +15,17 @@
 
 <script>
 
-import StateDetail from '@/components/StateDetail.vue'
+// import StateDetail from '@/components/StateDetail.vue'
+// import StateSummary from '@/components/StateSummary'
+
+import StateDetail from './StateDetail.vue'    // what is the difference in formatting from above?
+import StateSummary from './StateSummary.vue'
 
 export default {
     name: 'StateList',
     components: {
-        StateDetail
+        StateDetail,
+        StateSummary
     },
     data() {
         return {
@@ -30,11 +39,20 @@ export default {
     fetchAllStates() {
         this.$stateService.getAllStates().then ( states => {
             this.states = states
+            console.log(states)
+        })
+        .catch( err => {                                            // video 13
+            alert('Sorry, can\'t fetch state list')
+            console.error(err)
         })
     },
     updateVisited(stateName, visited) {
         this.$stateService.setVisited(stateName, visited).then( () => {
             this.fetchAllStates()
+        })
+        .catch( err => {                                            // video 13
+            alert('Sorry, can\'t update state')
+            console.error(err)
         })
     }
   }
