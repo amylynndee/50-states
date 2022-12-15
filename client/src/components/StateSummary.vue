@@ -14,7 +14,7 @@
 <script>
 export default {
     name: 'StateSummary',
-    props: {
+    props: {                        // props - you list the data type, which is Arrays
         states: Array,
 
     },
@@ -23,7 +23,7 @@ export default {
             let visitedCount = 0
             this.states.forEach( state => { 
                if (state.visited) {
-                    visitedCount++
+                    visitedCount++                      // this counts the total states visited
                }
             })
             return visitedCount
@@ -36,7 +36,7 @@ export default {
             }
         },
         AreAllVisited() {
-            return this.totalVisited === this.states.length
+            return this.totalVisited === this.states.length             // this will return true if all states have been visited
         }
     }
 }

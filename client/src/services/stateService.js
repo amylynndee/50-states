@@ -3,8 +3,8 @@ import axios from 'axios'
 
 export default {
     getAllStates() {
-        return axios.get('/api/states').then( response =>{
-            return response.data
+        return axios.get('/api/states').then( response =>{                // this will make a request to the API
+            return response.data                                            
         })
     },
     setVisited(stateName, visited) {

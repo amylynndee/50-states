@@ -62,3 +62,5 @@ export default {
 }
 
 </style>
+
+<!-- This displays each state by name, map icon and checkbox for the user to select if they have visited the state-->

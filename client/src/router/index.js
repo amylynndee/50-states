@@ -23,11 +23,11 @@ export default createRouter({
             component: StateMap
         },
         {
-            path: '/:pathMatch(.*)*',           // lab 14
+            path: '/:pathMatch(.*)*',           // lab 14 - this will be used if there is an error in the route request
             name: 'NotFound',                   // lab 14
-            component: NotFound                 // lab 14
+            component: NotFound                 // lab 14  
         }
     ] 
 })
 
-// list of routes (line 8-10) will be available to main.js
+// list of routes will be available to main.js

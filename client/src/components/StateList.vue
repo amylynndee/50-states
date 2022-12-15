@@ -15,10 +15,8 @@
 
 <script>
 
-// import StateDetail from '@/components/StateDetail.vue'
-// import StateSummary from '@/components/StateSummary'
 
-import StateDetail from './StateDetail.vue'    // what is the difference in formatting from above?
+import StateDetail from './StateDetail.vue'    
 import StateSummary from './StateSummary.vue'
 
 export default {
@@ -72,3 +70,5 @@ export default {
 }
 
 </style>
+
+<!-- This tallies the states visited and also alerts user if there are any errors-->

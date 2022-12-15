@@ -7,12 +7,12 @@
 
     </div>
 
-    <!-- todo, map here-->
+    <!-- map here-->
 
-    <div id="map-container" v-of="dataReady">
+    <div id="map-container" v-if="dataReady">           <!--just corrected this-->
         <l-map ref="map" v-on:ready="onMapReady" v-bind:center="mapCenter" v-bind:zoom="state.zoom">
             <l-tile-layer
-                url="url=https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution="&copy; OpenStreetMap contributors">
             </l-tile-layer>
         </l-map>
@@ -47,8 +47,8 @@ export default {
                 this.dataReady = true
             }).catch ( err => {
                 // 404 not found
-                if ( err.response && err.response.staus === 404) {
-                    // this.state.name = '?' // todo, think about a better way to communicate to the user - replacing this line with below - lab 14
+                if ( err.response && err.response.status === 404) {
+                    // this.state.name = '?' // think about a better way to communicate to the user - replacing this line with below - lab 14
                     // Programmatically navigate to the Not Found page.         // lab 14
                     this.$router.push({ name: 'NotFound' })                     // lab 14
 
@@ -65,7 +65,7 @@ export default {
         },
         setMapView() {
             if (this.mapReady && this.dataReady) {
-                // todo, make sure map shows correct part of world and zoom level.
+                // make sure map shows correct part of world and zoom level.
                 this.$refs.map.leafletObject.setView(this.mapCenter, this.zoom)
             }
         }
@@ -86,3 +86,5 @@ export default {
 }
 
 </style>
+
+<!--this page displays the maps-->

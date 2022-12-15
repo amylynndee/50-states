@@ -30,3 +30,5 @@ export default {
 }
 
 </style>
+
+<!-- This will display the banner image, header and tally how many states have been visited-->

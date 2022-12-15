@@ -41,3 +41,6 @@ export default {
 
 
 </style>
+
+<!-- This is for the bottom/footer part of the page which indludes easy accesible links for the home page, anout page
+and provides credit to the image and map icon used-->
